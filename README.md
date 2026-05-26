@@ -1,67 +1,153 @@
-# 📊 电商用户行为分析与购买预测项目
+# E-commerce User Behavior Analysis and Purchase Prediction
 
-## 🔥 项目简介
-
-本项目基于电商用户行为数据，分析影响用户购买的关键因素，并构建机器学习模型预测用户是否购买。
+A data analysis and machine learning project based on 8,000 e-commerce user behavior records.  
+The project explores user behavior patterns, identifies key factors influencing purchase decisions, and builds a classification model to predict purchase probability.
 
 ---
 
-## 📁 项目结构
+## Project Overview
 
-电商分析/
-├── data/ 数据集
-├── src/ 代码
-├── images/ 可视化结果
+This project focuses on analyzing e-commerce user behavior data to understand conversion-driving factors and build a predictive model for purchase behavior.
+
+Main objectives:
+
+- Analyze relationships between user behavior and purchase decisions
+- Identify the most influential behavioral features
+- Build a machine learning classification model
+- Extract actionable business insights
+
+---
+
+## Project Structure
+
+```text
+ecommerce-analysis/
+│
+├── data/
+│   └── ecommerce_user_behavior_8000.csv
+│
+├── src/
+│   └── ecommerce_analysis.py
+│
+├── images/
+│   ├── heatmap.png
+│   ├── confusion_matrix.png
+│   └── roc_curve.png
+│
+├── requirements.txt
 └── README.md
+```
 
 ---
 
-## 📊 数据说明
+## Dataset Description
 
-包含8000条用户行为数据，主要字段：
+The dataset contains 8,000 user records with behavioral and demographic information.
 
-- age：年龄
-- gender：性别
-- device_type：设备类型
-- pages_viewed：浏览页数
-- cart_items：加购数量
-- bounce_rate：跳出率
-- purchase：是否购买（目标变量）
+Features include:
 
----
+- `age`
+- `gender`
+- `device_type`
+- `time_on_site`
+- `pages_viewed`
+- `cart_items`
+- `previous_purchases`
+- `bounce_rate`
+- `avg_session_time`
 
-## 📈 主要分析结果
+Target variable:
 
-- 加购行为是最重要的购买因素
-- 跳出率越高，购买概率越低
-- 浏览页数与购买正相关
-- 年龄影响较弱
-
----
-
-## 🤖 模型
-
-- 模型：Logistic Regression（二分类）
-- 任务：预测用户是否购买
+- `purchase`
 
 ---
 
-## 📊 模型评估
+## Exploratory Data Analysis
+
+Key findings:
+
+- Cart activity shows the strongest positive relationship with purchase behavior
+- Higher bounce rates significantly reduce purchase probability
+- Page depth positively correlates with conversion
+- Demographic features have relatively weak predictive power
+
+---
+
+## Machine Learning Model
+
+Model used:
+
+- Logistic Regression
+
+Workflow:
+
+1. Data preprocessing
+2. Feature selection
+3. Train-test split
+4. Model training
+5. Performance evaluation
+
+Evaluation metrics:
 
 - Accuracy
 - Precision
 - Recall
 - F1-score
+- Confusion Matrix
 - ROC Curve
 
 ---
 
-## 🧠 结论
+## Feature Importance
 
-用户行为特征比基础信息更能预测购买行为，其中“加购行为”是最关键变量。
+Most influential variables:
+
+- `cart_items`
+- `previous_purchases`
+- `time_on_site`
+- `pages_viewed`
+- `bounce_rate`
+
+Behavioral signals are significantly more predictive than demographic features.
 
 ---
 
-## 🛠 技术栈
+## Business Insights
 
-Python / Pandas / Sklearn / Matplotlib / Seaborn
+The analysis suggests:
+
+- Cart activity is the strongest purchase signal
+- Reducing bounce rate can improve conversion performance
+- Improving browsing engagement increases purchase likelihood
+- User behavior data provides stronger predictive value than static profile attributes
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+
+---
+
+## Results
+
+The project successfully implements an end-to-end workflow including:
+
+- Data cleaning
+- Exploratory analysis
+- Predictive modeling
+- Visualization
+- Business interpretation
+
+---
+
+## Author
+
+Undergraduate Project  
+Central University of Finance and Economics  
+Information and Computing Science
